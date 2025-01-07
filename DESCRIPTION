@@ -1,0 +1,32 @@
+Package: HyDDG
+Title: Hypergeometric Distribution for Detecting DEGs
+Version: 0.0.1
+Authors@R: 
+    c(person("Yun", "Zhu", email = "Zhu.Yun@mh-hannover.de", 
+           role = c("aut", "cre")),
+      person("Yanzhe", "Xu", email = "Xu.Yanzhe@mh-hannover.de", 
+           role = "aut"),
+      person("Juergen","Borlak",email = "Borlak.Juergen@mh-hannover.de",
+      role = "aut"))
+Description: HyDDG provides a suite of tools to detect differentially expressed genes 
+    (DEGs) using a hypergeometric distribution-based approach. This package allows users 
+    to compute fold changes, perform statistical tests for up- and down-regulated genes, 
+    and adjust p-values for multiple testing. The core functionality includes calculating 
+    statistical significance for each gene based on experimental and control group data, 
+    and outputs meaningful DEGs with recommended thresholds for fold change and FDR. 
+    It is specifically designed for transcriptomics data analysis, making it ideal for 
+    researchers working in bioinformatics and computational biology.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    stats,
+    utils,
+    Biobase (>= 2.0)
+Suggests: 
+    BiocManager,
+    CLL
+Depends: 
+    R (>= 4.0.0)
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
