@@ -58,7 +58,7 @@
 #'                 levels = c("Control", "Treat"))
 #'
 #' # Run the HyDDG function
-#' HyDDG(data = ourData, group.list = group)
+#' HyDDGResult <- HyDDG(data = ourData, group.list = group)
 #'
 #' # Access the result
 #' head(HyDDGResult)
@@ -73,7 +73,7 @@ HyDDG <- function(data, group.list, adj.p.method = "BH", BV = 1, ...){
   N <- nrow(hyfitR) * ncol(hyfitR)
 
 
-  HyDDGResult <<- data.frame()
+  HyDDGResult <- data.frame()
 
   for (j in 1:nrow(hyfitR)) {
 
@@ -120,7 +120,7 @@ HyDDG <- function(data, group.list, adj.p.method = "BH", BV = 1, ...){
       lg_p <- -log10(P_min) * -1
     }
 
-    HyDDGResult <<- rbind(HyDDGResult, data.frame(
+    HyDDGResult <- rbind(HyDDGResult, data.frame(
       ID = rownames(hyfitR)[j],
       ave.expr = rowMeans(data)[j],
       lg.p = lg_p,
@@ -129,10 +129,10 @@ HyDDG <- function(data, group.list, adj.p.method = "BH", BV = 1, ...){
 
      setTxtProgressBar(pb, j)
   }
-  HyDDGResult$p.adj <<- p.adjust(HyDDGResult$p.value, method = adj.p.method)
-  HyDDGResult$FC <<- rowMeans(hyfitR)
-  HyDDGResult$logFC <<- log2(HyDDGResult$FC)
-
+  HyDDGResult$p.adj <- p.adjust(HyDDGResult$p.value, method = adj.p.method)
+  HyDDGResult$FC <- rowMeans(hyfitR)
+  HyDDGResult$logFC <- log2(HyDDGResult$FC)
+  return(HyDDGResult)
   close(pb)
 
 }

@@ -74,7 +74,7 @@ group <- factor(c(rep("Control", 12), rep("Treat", 12)),
                 levels = c("Control", "Treat"))
 
 # Run the HyDDG function
-HyDDG(data = ourData, group.list = group)
+HyDDGResult <- HyDDG(data = ourData, group.list = group)
 
 # Access the result
 head(HyDDGResult)
