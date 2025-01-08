@@ -2,7 +2,9 @@
 
 # HyDDG: Hypergeometric Distribution for Detecting Differentially Expressed Genes (DEGs)
 
+
 ## 📚Overview
+
 
 HyDDG is an R package designed for researchers in bioinformatics and computational biology to detect differentially expressed genes (DEGs) using a hypergeometric distribution-based approach. The package is tailored for analyzing transcriptomics data and provides statistical measures for identifying up- and down-regulated genes with precise p-value adjustments and fold change calculations.
 
