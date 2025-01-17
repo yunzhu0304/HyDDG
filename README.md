@@ -1,4 +1,4 @@
-# HyDDG User‘s Guide  <a href="[https://jbengler.github.io/tidyplots/](https://maze-icicle-277.notion.site/HyDDG-User-s-Guide-175b4db0634380048bd4c28d39f0ec05)"><img src="man/figure/logo.svg" align="right" height="139" alt="HyDDG website" /></a>
+# HyDDG User‘s Guide  <a href="https://maze-icicle-277.notion.site/HyDDG-User-s-Guide-175b4db0634380048bd4c28d39f0ec05"><img src="man/figure/logo.svg" align="right" height="139" alt="HyDDG website" /></a>
 
 # HyDDG: Hypergeometric Distribution for Detecting Differentially Expressed Genes (DEGs)  
 
